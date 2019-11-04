@@ -2,7 +2,9 @@ package main
 
 import (
 	"html/template"
+	"log"
 	"net/http"
+	"os"
 	"strconv"
 )
 
@@ -27,16 +29,15 @@ func init() {
 }
 
 func main() {
-	// port := os.Getenv("PORT")
+	port := os.Getenv("PORT")
 
-	// if port == "" {
-	// 	log.Fatal("$PORT must be set")
-	// }
+	if port == "" {
+		log.Fatal("$PORT must be set")
+	}
 
 	http.HandleFunc("/", index)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
-	// http.ListenAndServe(":"+port, nil)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 func index(w http.ResponseWriter, req *http.Request) {
