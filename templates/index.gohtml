@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
+    <title>Przelicznik</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gray-200 flex flex-col items-center">
@@ -23,11 +23,11 @@
 </form>
 
 {{if not .}}
-  <div class="items-center mr-8 text-blue-500 font-bold"> 
-  Wpisz maksymalna ilość punktów do uzyskania w teście
+  <div class="flex items-center m-4 text-blue-500 font-bold sm:text-xl md:text-xl lg:text-4xl xl:text-4xl"> 
+    <p>Wpisz maksymalną ilość punktów do uzyskania w teście</p>
   </div>
 {{else}} 
-  <div class="rounded-lg overflow-hidden shadow-lg bg-blue-500 flex m-4 p-8 sm:text-xl md:text-xl lg:text-4xl xl:text-4xl">
+  <div class="rounded-lg overflow-hidden shadow-lg bg-blue-500 flex m-4 p-8 sm:text-xl md:text-xl lg:text-2xl xl:text-2xl">
     <div class="flex flex-col items-center mr-8 text-white font-extrabold"> 
       <div> Celujący </div>
       <div> Bardzo dobry </div>
