@@ -20,7 +20,7 @@ function onButtonClick(event) {
   warning.style.display = 'none'
   instruction.style.display = 'none'
 
-  const percentages = [100, 88, 73, 58, 45, 0]
+  const percentages = [99, 88, 73, 58, 45, 0]
   let prevPoints = null
   let points = []
   for (const percentage of percentages) {
@@ -35,7 +35,6 @@ function onButtonClick(event) {
   }
   grades.style.display = 'flex'
 }
-
 
 
 function computePoints(minPercentage, maxPoints, prevGrade) {
