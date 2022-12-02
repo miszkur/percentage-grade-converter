@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Przelicznik</title>
+  <meta name="description" content="Percentage-grade converter">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body class="bg-gray-200 flex flex-col items-center">
+
+<h1 class="font-bold sm:text-xl md:text-2xl lg:text-5xl xl:text-5xl text-blue-800 m-8">Przelicznik ocenowo-procentowy</h1>
+
+<div class="m-4" >
+  <input id="points-input"
+    type="number" 
+    class="appearance-none border-2 border-blue-600 rounded py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
+    name="maxPoints"
+    placeholder="Max punktów">
+  <input id="submit-button"
+    type="button" 
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg"
+    value="Oblicz">
+</div>
+
+<div id="instruction-text" class="flex items-center m-4 text-blue-500 font-bold sm:text-xl md:text-xl lg:text-4xl xl:text-4xl"> 
+  <p>Wpisz maksymalną ilość punktów do uzyskania w teście</p>
+</div>
+
+
+  <div id="max-points-warning"
+  class="flex items-center m-4 text-red-500 font-bold sm:text-xl md:text-xl lg:text-4xl xl:text-4xl"> 
+    <p>Liczba możliwych punktów do uzyskania w teście musi być  większa niż 5.</p>
+  </div>
+  
+  <div class="rounded-lg overflow-hidden shadow-xl bg-blue-500 flex m-4 p-8 sm:text-xl md:text-xl lg:text-2xl xl:text-2xl" id="grades">
+    <div class="flex flex-col items-center mr-8 text-white font-extrabold"> 
+      <div> Celujący </div>
+      <div> Bardzo dobry </div>
+      <div> Dobry </div>
+      <div> Dostateczny </div>
+      <div> Dopuszczający </div>
+      <div> Niedostateczny </div>
+    </div>
+    <div class="flex flex-col items-center text-blue-900 font-bold" id="points">
+
+    </div>
+  </div>
+
+<script src="./js/script.js"></script>
+
+</body>
+</html>
