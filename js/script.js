@@ -27,7 +27,7 @@ function onButtonClick(event) {
     points.push(computePoints(percentage, maxPoints, prevPoints))
     prevPoints = points[points.length-1]
   }
-  
+  pointsText.innerHTML = ''
   for (const {max, min} of points) {
     const element = document.createElement('div')
     element.innerText = min + ' - ' + max
